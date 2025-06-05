@@ -1,0 +1,21 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "Run Java with input/output",
+        "type": "shell",
+        "command": "javac Main.java && java Main < input.txt > output.txt",
+        "problemMatcher": [],
+        "presentation": {
+          "reveal": "never",        // Don't auto-show terminal
+          "focus": false,           // Don't grab focus
+          "panel": "shared"         // Use shared panel (minimal visual noise)
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+    ]
+  }
+  
