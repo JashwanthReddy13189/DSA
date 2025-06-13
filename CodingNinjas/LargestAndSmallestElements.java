@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class LargestAndSmallestElements {
     public static void main(String[] args) {
-        int[] arr = {1, 2, 3, 12, 7, 46, 87, 6};
+        int[] arr = {-5, -3, -9, -1, -6, -1, -10, -2};
         int n = arr.length;
         int[] firstOrderElements = getFirstOrderElements(n, arr);
         System.out.println(Arrays.toString(firstOrderElements));

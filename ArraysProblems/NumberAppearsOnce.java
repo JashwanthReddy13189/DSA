@@ -24,8 +24,10 @@ public class NumberAppearsOnce {
 
     // Optimal Approach
     private static void optimalApproach(int[] arr, int n) {
+        System.out.println(" Optimal Approach : ");
         int xor = 0;
         for (int i = 0; i < n; i++) {
+            System.out.println(" xor " + xor + " " + " arr[i] " + arr[i]);
             xor = xor ^ arr[i];
         }
         System.out.println(xor);
@@ -33,6 +35,7 @@ public class NumberAppearsOnce {
 
     // Better Approach using Hashing
     private static void betterApproachHashing(int[] arr, int n) {
+        System.out.println(" Better Approach Using Hashing : ");
         int max = 0;
         for (int i = 0; i < n; i++) {
             max = Math.max(max, arr[i]);
@@ -50,14 +53,10 @@ public class NumberAppearsOnce {
 
     // Better Approach using map
     private static void betterApproachMap(int[] arr, int n) {
+        System.out.println(" Better Approach Using Map : ");
         Map<Integer, Integer> mpp = new HashMap<>();
         for (int i = 0; i < n; i++) {
-            int cnt = 1;
-            if (mpp.containsKey(arr[i])) {
-                mpp.put(arr[i], cnt + 1);
-            } else {
-                mpp.put(arr[i], cnt);
-            }
+            mpp.put(arr[i], mpp.getOrDefault(arr[i], 0) + 1);
         }
         for (Map.Entry<Integer, Integer> mp : mpp.entrySet()) {
             if (mp.getValue() == 1) {
@@ -68,6 +67,7 @@ public class NumberAppearsOnce {
 
     // Brute Force Approach
     private static void bruteForceApproach(int[] arr, int n) {
+        System.out.println(" Brute Force Approach : ");
         for (int i = 0; i < n; i++) {
             int num = arr[i];
             int cnt = 0;

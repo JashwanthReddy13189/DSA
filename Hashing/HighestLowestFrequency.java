@@ -15,11 +15,12 @@ public class HighestLowestFrequency {
         Map<Integer, Integer> map = new HashMap<>();
         // Frequency Map
         for (int i = 0; i < n; i++) {
-            if (map.containsKey(arr[i])) {
+           /* if (map.containsKey(arr[i])) {
                 map.put(arr[i], map.get(arr[i]) + 1);
             } else {
                 map.put(arr[i], 1);
-            }
+            }*/
+            map.put(arr[i], map.getOrDefault(arr[i], 1) + 1);
         }
         // Initial Values of elements and frequencies
         int maxFreq = 0, minFreq = n;

@@ -1,9 +1,6 @@
 package ArraysProblems;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class UnionArray {
     public static void main(String[] args) {
@@ -11,7 +8,7 @@ public class UnionArray {
         int[] nums2 = {1, 2, 7};
 
         // Brute Force
-        usingSet(nums1, nums2);
+        //usingSet(nums1, nums2);
 
         // Optimal Approach
         usingPointers(nums1, nums2);
@@ -20,8 +17,9 @@ public class UnionArray {
     private static void usingPointers(int[] nums1, int[] nums2) {
         int i = 0, j = 0;
         int n1 = nums1.length, n2 = nums2.length;
-        ArrayList<Integer> union = new ArrayList<>();
+        List<Integer> union = new ArrayList<>();
         while (i < n1 && j < n2) {
+            System.out.println(" Runs/n " + i + " " + j);
             if (nums1[i] <= nums2[j]) {
                 if (union.isEmpty() || union.get(union.size() - 1) != nums1[i]) {
                     union.add(nums1[i]);
@@ -37,17 +35,18 @@ public class UnionArray {
         while (i < n1) {
             if (union.get(union.size() - 1) != nums1[i]) {
                 union.add(nums1[i]);
+                i++;
             }
-            i++;
         }
         while (j < n2) {
-            if (union.get(union.size() - 1) != nums1[j]) {
+            if (union.get(union.size() - 1) != nums2[j]) {
                 union.add(nums2[j]);
+                j++;
             }
-            j++;
         }
         System.out.print("[");
-        for (int m: union) {
+        for (
+                int m : union) {
             System.out.print(m + ", ");
         }
         System.out.print("]");

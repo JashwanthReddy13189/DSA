@@ -3,8 +3,8 @@ package BasicMaths;
 public class GCD {
 
     public static void main(String[] args) {
-        int a = 11;
-        int b = 13;
+        int a = 9;
+        int b = 12;
 
         while (a > 0 && b > 0) {
             if (a > b) {

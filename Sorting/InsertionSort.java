@@ -7,7 +7,7 @@ public class InsertionSort {
     public static void main(String[] args) {
         int[] arr = {13, 46, 24, 52, 20, 9};
         int n = arr.length;
-        //InsertionSorting(arr, n);
+        InsertionSorting(arr, n);
         System.out.println(Arrays.toString(arr));
         int i = 0;
         InsertionSortingRecursive(arr, n, i);

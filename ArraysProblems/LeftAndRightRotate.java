@@ -1,6 +1,6 @@
 package ArraysProblems;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class LeftAndRightRotate {
     public static void main(String[] args) {
