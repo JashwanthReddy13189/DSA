@@ -1,20 +1,30 @@
 package ArraysProblems;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TwoSum {
     public static void main(String[] args) {
-        int[] arr = {2, 6, 5, 8, 11};
+        int[] arr = {1, 3, 4, 2, 2};
         Arrays.sort(arr);
         System.out.println(Arrays.toString(arr));
         int n = arr.length;
         int target = 14;
         //System.out.println(Arrays.toString(twoSum(arr, n, target)));
         //System.out.println(Arrays.toString(twoSum(arr, target)));
-        System.out.println(Arrays.toString(twoSumOptimal(arr, n, target)));
+        //System.out.println(Arrays.toString(twoSumOptimal(arr, n, target)));
+        System.out.println(twoSumArrayListPair(arr, n, target));
     }
+
+    private static int twoSumArrayListPair(int[] arr, int n, int target) {
+        Set<Integer> set = new HashSet<>();
+        for (int i =0; i< n;i++) {
+            if(!set.add(arr[i])) {
+                return arr[i];
+            }
+        }
+        return -1;
+    }
+
 
     private static int[] twoSumOptimal(int[] arr, int n, int target) {
         int start = 0, end = n - 1;
@@ -50,4 +60,5 @@ public class TwoSum {
         }
         return new int[0];
     }
+
 }

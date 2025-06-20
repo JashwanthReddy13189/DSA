@@ -11,11 +11,13 @@ class removeElement {
         int val = 3;
 
         // Brute Force
-        //System.out.println(removeElements(arr, val));
+        System.out.println(removeElements(arr, val));
 
         // Optimal Approach
         System.out.println(removeElementsOA(arr, val));
     }
+
+
 
     // Optimal Approach
     private static int removeElementsOA(int[] arr, int val) {
