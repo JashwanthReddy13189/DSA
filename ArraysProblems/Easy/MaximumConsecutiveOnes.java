@@ -1,4 +1,4 @@
-package ArraysProblems;
+package ArraysProblems.Easy;
 
 public class MaximumConsecutiveOnes {
     public static void main(String[] args) {

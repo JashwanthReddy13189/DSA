@@ -1,4 +1,4 @@
-package ArraysProblems;
+package ArraysProblems.Easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

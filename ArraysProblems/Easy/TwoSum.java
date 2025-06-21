@@ -1,4 +1,4 @@
-package ArraysProblems;
+package ArraysProblems.Easy;
 
 import java.util.*;
 
@@ -17,8 +17,8 @@ public class TwoSum {
 
     private static int twoSumArrayListPair(int[] arr, int n, int target) {
         Set<Integer> set = new HashSet<>();
-        for (int i =0; i< n;i++) {
-            if(!set.add(arr[i])) {
+        for (int i = 0; i < n; i++) {
+            if (!set.add(arr[i])) {
                 return arr[i];
             }
         }
